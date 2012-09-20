@@ -15,7 +15,7 @@
         "doctrine/orm": "2.2.*",
         "doctrine/common": "2.2.*",
         "doctrine/dbal": "2.2.*",
-        "fabpot/silex": "1.0.*"
+        "silex/silex": "1.0.*"
     },
 
     "suggest": {
