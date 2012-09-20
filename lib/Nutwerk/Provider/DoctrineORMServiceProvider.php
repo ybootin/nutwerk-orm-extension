@@ -10,19 +10,19 @@
 
 namespace Nutwerk\Provider;
 
-use \Doctrine\DBAL\DriverManager,
-    \Doctrine\DBAL\Configuration as DBALConfiguration;
+use \Doctrine\DBAL\Configuration as DBALConfiguration,
+    \Doctrine\DBAL\DriverManager;
 
-use \Doctrine\ORM\EntityManager,
-    \Doctrine\ORM\Configuration as ORMConfiguration,
-    \Doctrine\ORM\Mapping\Driver\DriverChain,
+use \Doctrine\ORM\Configuration as ORMConfiguration,
     \Doctrine\ORM\Mapping\Driver\AnnotationDriver,
+    \Doctrine\ORM\Mapping\Driver\YamlDriver,
     \Doctrine\ORM\Mapping\Driver\XmlDriver,
-    \Doctrine\ORM\Mapping\Driver\YamlDriver;
+    \Doctrine\ORM\EntityManager;
 
-use \Doctrine\Common\Annotations\AnnotationReader,
-    \Doctrine\Common\Cache\ApcCache,
+use \Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain,
+    \Doctrine\Common\Annotations\AnnotationReader,
     \Doctrine\Common\Cache\ArrayCache,
+    \Doctrine\Common\Cache\ApcCache,
     \Doctrine\Common\EventManager;
 
 use \Silex\Application;
@@ -90,7 +90,7 @@ class DoctrineORMServiceProvider implements ServiceProviderInterface
             $config->setMetadataCacheImpl($cache);
             $config->setQueryCacheImpl($cache);
 
-            $chain = new DriverChain;
+            $chain = new MappingDriverChain;
             
             foreach((array) $app['db.orm.entities'] as $entity) {
                 switch($entity['type']) {
