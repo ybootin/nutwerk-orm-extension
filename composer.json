@@ -2,7 +2,7 @@
     "name": "taluu/doctrine-orm-provider",
     "description": "Doctrine ORM provider for Silex",
     "keywords": ["silex", "doctrine", "orm", "database", "extension", "provider"],
-    "homepage": "https://github.com/talus/nutwerk-orm-extension",
+    "homepage": "https://github.com/taluu/nutwerk-orm-extension",
     "license": "MIT",
     
     "authors": [
