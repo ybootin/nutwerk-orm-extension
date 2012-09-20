@@ -1,23 +1,31 @@
 {
-    "name": "nutwerk/doctrine-orm-provider",
+    "name": "taluu/doctrine-orm-provider",
     "description": "Doctrine ORM provider for Silex",
     "keywords": ["silex", "doctrine", "orm", "database", "extension", "provider"],
-    "homepage": "https://github.com/mjakubowski/nutwerk-orm-extension",
+    "homepage": "https://github.com/talus/nutwerk-orm-extension",
+    "license": "MIT",
+    
     "authors": [
-        { "name": "Marc Jakubowski", "homepage": "http://nutwerk.de/" }
+        { "name": "Marc Jakubowski", "homepage": "http://nutwerk.de/" },
+        { "name": "Baptiste \"Talus\" Clavié", "homepage": "http://www.talus-works.net" }
     ],
+
     "require": {
         "php": ">=5.3.2",
-        "doctrine/orm": "2.1.*",
-        "doctrine/common": "2.1.*",
-        "doctrine/dbal": "2.1.*"
+        "doctrine/orm": "2.2.*",
+        "doctrine/common": "2.2.*",
+        "doctrine/dbal": "2.2.*",
+        "fabpot/silex": "1.0.*"
     },
+
     "suggest": {
         "symfony/console": "Necessary if you would like to use the Doctrine CLI tools"
     },
+
     "autoload": {
         "psr-0": { "Nutwerk\\Provider": "lib/" }
     },
+
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
