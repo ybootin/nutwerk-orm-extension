@@ -1,6 +1,8 @@
 # Doctrine ORM Service Provider for Silex
 This extension sets up Doctrine ORM for Silex by reusing the database connection established with the DBAL extension (the default DoctrineServiceProvider included with Silex).
 
+**Note :** You will find a better provider for DoctrineORM, which is maintained and updated by [Beau Simensen](https://github.com/simensen) : [dflydev's doctrine orm provider](https://github.com/dflydev/dflydev-doctrine-orm-service-provider)
+
 **Note :** This provider was first created and provided by [Marc Jakubowski](https://github.com/mjakubowski/nutwerk-orm-extension/), but due to unknown reason, he can't maintain it anymore, as Silex API evolved since the last modification.
 
 You'll find the following topics in this README:
